@@ -1,0 +1,83 @@
+@media (max-width: 824px) {
+    header {
+        padding: 0px 15px;
+    }
+    header nav ul li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+        display: none;
+    }
+    header .menubtn {
+        display: block;
+    }
+    header .icons {
+        gap:15px;
+    }
+    .banner .bannercontent h1 {
+        font-size: 50px;
+    }
+    .banner .bannercontent .buttons div {
+        border-radius: 4px;
+        
+    }
+    .offers {
+        font-size: 14px;
+        justify-content: center;
+    }
+    
+}
+
+
+@media only screen and (max-width:768px) {
+    .banner .bannercontent h1 {
+        color:white;
+        font-size: 45px;
+    }
+    .banner .bannercontent h2 {
+        color:white;
+        font-size: 20px;
+        
+    }
+    .offers {
+        font-size: 12px;
+        gap:5px;
+    }
+    .offers > div:first-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .offers > div:last-child {
+        flex-direction: column;
+        gap:10px
+    }
+
+}
+
+/* /////////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width:512px) {
+    header nav ul li:first-child {
+        font-size: 16px;
+    }
+    .banner .bannercontent h1 {
+        font-size: 45px;
+        color:white;
+
+    }
+    .banner .bannercontent h2 {
+        font-size: 20px;
+        color:white
+
+    }
+    .banner .bannercontent .buttons {
+        grid-template-columns: 1fr;
+    }
+    header .icons {
+        gap: 5px;
+    }
+  
+   
+
+}
+
+
+
+

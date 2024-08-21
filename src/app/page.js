@@ -1,30 +1,18 @@
 "use client"
 
 import Head from "./Componant/Head"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 
 const Home = ()=> {
-  const winwidth = window.innerWidth;
-  const [currentbg, setcurrenbg] = useState("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
-  const changebg = () => {
-    if (winwidth <= 768) {
-      setcurrenbg("https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577");
-    }
-    else {
-      setcurrenbg("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
-    }
-  }
-  useEffect(() => {
-    changebg()
-  }, [winwidth])
+
   return (
 
 
     <>
       <Head />
       <div className="banner">
-        <img width="100%" src={currentbg} alt="" />
+        <img width="100%" src="https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571" alt="" />
         <div className="bannercontent">
           <h1>Fall 2024</h1>
           <h2>The new classic.</h2>

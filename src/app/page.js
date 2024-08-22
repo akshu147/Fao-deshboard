@@ -1,13 +1,25 @@
 "use client"
 
 import Head from "./Componant/Head"
-import React from 'react'
-import img1 from "./images/PLP_thumbnail_image_area_e64a9408-d985-4174-b37f-0ade6e58aab1_900x.jpg"
-import Image from 'next/image'
-// import myimage from './images/1110378-229.01.jpg'
-// import secimage from "./images/1210402-400.7889.jpg"
+import React, { useState } from 'react'
+
+
+// https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577
+// https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571
 
 const Home = ()=> {
+  const [currentimage, setcurrentimage] = useState("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
+  window.addEventListener("resize", ()=> {
+    if(screen.availWidth <= 768) {
+      setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577")
+    }
+    else{
+      setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
+    }
+  })
+
+
+
 
   return (
 
@@ -15,7 +27,7 @@ const Home = ()=> {
     <>
       <Head />
       <div className="banner">
-        <img width="100%" src={`${(window.innerWidth <= 768) ? "https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577" : "https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571"}`} alt="" />
+        <img width="100%" src={currentimage}/>
         <div className="bannercontent">
           <h1>Fall 2024</h1>
           <h2>The new classic.</h2>

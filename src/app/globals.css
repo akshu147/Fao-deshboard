@@ -144,6 +144,34 @@ header nav ul li:nth-child(4):hover span {
   height: 20px;
   width: 20px;
 }
+.photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+  padding: 0 30px;
+  
+}
+.photos div p {
+  font-size: 14px;
+}
+.sliderhaader {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+}
+.sliderhaader h1 {
+  font-size: 36px;
+}
+.sliderhaader > div div {
+  align-items: center;
+  font-size: 24px;
+  color:black
+}
+
+
 
 
 

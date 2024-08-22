@@ -1,3 +1,14 @@
+@media only screen and (max-width:1024px) {
+
+}
+
+
+
+
+
+
+
+
 @media (max-width: 824px) {
     header {
         padding: 0px 15px;
@@ -22,6 +33,12 @@
         font-size: 14px;
         justify-content: center;
     }
+    .sliderhaader {
+       
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+   
     
 }
 
@@ -48,6 +65,16 @@
         flex-direction: column;
         gap:10px
     }
+    .photos {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px 10px;
+    }
+    .sliderhaader {
+       
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+ 
 
 }
 
@@ -72,6 +99,13 @@
     }
     header .icons {
         gap: 5px;
+    }
+    .sliderhaader {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding-left: 10px;
+        padding-right: 10px;
     }
   
    

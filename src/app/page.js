@@ -1,7 +1,7 @@
 "use client"
 
 import Head from "./Componant/Head"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 // https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577
@@ -9,14 +9,17 @@ import React, { useState } from 'react'
 
 const Home = ()=> {
   const [currentimage, setcurrentimage] = useState("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
-  window.addEventListener("resize", ()=> {
-    if(screen.availWidth <= 768) {
-      setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577")
-    }
-    else{
-      setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
-    }
-  })
+  useEffect(()=> {
+    window.addEventListener("resize", ()=> {
+      if(screen.availWidth <= 768) {
+        setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577")
+      }
+      else{
+        setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
+      }
+    })
+  
+  }, [])
 
 
 

@@ -50,7 +50,7 @@ const Home = ()=> {
         </div>
         <div>
           <div className='py-1'><img src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/loyalty_logo_light.png?v=1672326811" alt="" /><span className='ps-2'>Earn Points</span></div>
-          <div className='py-1'><img src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/Sezzle.png?v=1704400405" alt="" /><span className=''>Buy Now, Pay Laters</span></div>
+          <div className='py-1'><img src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/Sezzle.png?v=1704400405" alt="" /><span className='ps-2'>Buy Now, Pay Laters</span></div>
         </div>
 
 

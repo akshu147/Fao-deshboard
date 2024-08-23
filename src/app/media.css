@@ -59,11 +59,12 @@
     }
     .offers > div:first-child {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
     }
     .offers > div:last-child {
         flex-direction: column;
-        gap:10px
+        gap:8px;
+        
     }
     .photos {
         grid-template-columns: repeat(2, 1fr);
@@ -74,6 +75,9 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+    .offers {
+        padding: 7px 10px;
+    }
  
 
 }
@@ -82,7 +86,11 @@
 
 @media only screen and (max-width:512px) {
     header nav ul li:first-child {
-        font-size: 16px;
+        font-size: 17px;
+        font-weight: 700;
+
+
+
     }
     .banner .bannercontent h1 {
         font-size: 45px;
@@ -106,6 +114,9 @@
         align-items: start;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    .offers {
+        padding: 7px 10px;
     }
   
    

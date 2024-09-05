@@ -2,24 +2,30 @@
 
 import Head from "./Componant/Head"
 import React, { useEffect, useState } from 'react'
+import Womenslider from "./Componant/Womenslider"
+import Categoryslider from "./Componant/Categoryslider"
 
 
-// https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577
-// https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571
 
-const Home = ()=> {
+
+const Home = () => {
   const [currentimage, setcurrentimage] = useState("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
-  useEffect(()=> {
-    window.addEventListener("resize", ()=> {
-      if(screen.availWidth <= 768) {
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (screen.availWidth <= 768) {
         setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/slide_1_61dd1e39-fb83-4e9b-86a4-260af64309cd_1536x.jpg?v=1724079577")
       }
-      else{
+      else {
         setcurrentimage("https://ca.frankandoak.com/cdn/shop/files/desktop_duo_ae0f1920-9273-421b-afe3-d35256ff166b_2160x.jpg?v=1723666571")
       }
     })
-  
+
   }, [])
+
+
+  
+
+
 
 
 
@@ -30,7 +36,7 @@ const Home = ()=> {
     <>
       <Head />
       <div className="banner">
-        <img width="100%" src={currentimage}/>
+        <img width="100%" src={currentimage} />
         <div className="bannercontent">
           <h1>Fall 2024</h1>
           <h2>The new classic.</h2>
@@ -77,19 +83,26 @@ const Home = ()=> {
           <img width="100%" src="https://ca.frankandoak.com/cdn/shop/files/PLP_thumbnail_image_area-3_c3ad771e-8aba-4d77-aa55-512a322a3eed_900x.jpg?v=1723666852" alt="" />
           <p className="px-2 py-1 m-0">Mans Jackets</p>
         </div>
-      
+
       </div>
       <div className="sliderhaader">
-        <h1>This just in</h1>
+        <h1 className="py-3 m-0">This just in</h1>
         <div className="d-flex gap-4">
           <div>Women's</div>
           <div>Man's</div>
         </div>
       </div>
-      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere reprehenderit error, animi vel est nulla cumque repudiandae obcaecati quae ipsam sequi tenetur nemo. Unde, voluptatibus quae. Magnam id suscipit vel voluptates ab est, quidem ducimus, eligendi expedita tempora dolorem cum. Harum vero, exercitationem temporibus cum quos laborum doloribus rem impedit saepe ad itaque optio deserunt animi. Ipsa hic distinctio nemo expedita. Accusantium ad inventore quibusdam eligendi laudantium, praesentium officiis, at soluta non rerum quod repellat libero mollitia, id perspiciatis nihil eum voluptatibus nesciunt eos voluptate voluptates! Tempora blanditiis pariatur quibusdam totam aliquam quis ipsam, ut sapiente reiciendis! Eius, soluta! Voluptas!</h1>
-
+      <div className="sliders">
+        <Womenslider/>
+        
+      </div>
+      <div className="section-b">
+        <h1 className="text-center">What others are saying</h1>
+        <Categoryslider/>
+      </div>
     
-     
+
+
 
 
 
